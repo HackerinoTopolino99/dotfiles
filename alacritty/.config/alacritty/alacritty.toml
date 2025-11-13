@@ -1,0 +1,18 @@
+[general]
+import = [
+    "fonts.toml",
+    "keybindings.toml",
+    "nightfly.toml"
+]
+
+live_config_reload = true
+
+[window]
+opacity = 0.8
+
+[cursor.style]
+shape = "Beam"
+blinking = "Always"
+
+[mouse]
+hide_when_typing = true

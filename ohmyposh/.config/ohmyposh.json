@@ -1,0 +1,116 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "version": 3,
+  "palette": {
+    "background": "#011627",
+    "foreground": "#bdc1c6",
+    "bold": "#eeeeee",
+    "cursor": "#9ca1aa",
+    "cursortext": "#080808",
+    "selection": "#b2ceee",
+    "selectiontext": "#080808",
+    "black": "#1d3b53",
+    "red": "#fc514e",
+    "green": "#a1cd5e",
+    "yellow": "#e3d180",
+    "blue": "#82aaff",
+    "purple": "#c792ea",
+    "cyan": "#7fdbca",
+    "white": "#a1aab8",
+    "bright_green": "#21c7a8",
+    "bright_white": "#d6deeb",
+    "fern": "#87d787"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "display_mode": "environment",
+            "fetch_version": false,
+            "fetch_virtual_env": true
+          },
+          "template": "\ue235 ",
+          "foreground": "p:yellow",
+          "background": "p:background",
+          "type": "python",
+          "style": "plain"
+        },
+        {
+          "type": "os",
+          "style": "powerline",
+          "foreground": "#26C6DA",
+          "background": "p:background",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{ .Icon }} ",
+          "properties": {
+            "macos": "mac"
+          }
+        },
+        {
+          "type": "session",
+          "style": "powerline",
+          "foreground": "p:bright_green",
+          "background": "p:background",
+          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }}"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:red",
+          "background": "p:background",
+          "properties": {
+            "style": "folder"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:green",
+          "background": "p:background",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+          "properties": {
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "untracked_modes": {
+              "/Users/user/Projects/oh-my-posh/": "no"
+            },
+            "source": "cli",
+            "mapped_branches": {
+              "feat/*": "🚀 ",
+              "bug/*": "🐛 "
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "rprompt",
+      "segments": [
+        {
+          "type": "status",
+          "style": "diamond",
+          "foreground": "p:green",
+          "background": "p:background",
+          "foreground_templates": [
+            "{{ if .Error }}p:red{{ end }}"
+          ],
+          "trailing_diamond": "",
+          "template": "<p:cyan></>  ",
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ],
+  "secondary_prompt": {
+    "background": "p:background",
+    "foreground": "p:foreground",
+    "template": "-> "
+  }
+}
