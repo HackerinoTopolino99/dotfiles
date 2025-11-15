@@ -15,6 +15,10 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set({ "n", "v" }, "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+-- Usefull keybindings
+vim.keymap.set({ "n" }, "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set({ "n" }, "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
 -- NeoTree Mappings
 vim.keymap.set({ "n", "v", "i" }, "<C-b>", "<cmd>Neotree toggle action=show<CR>")
 vim.keymap.set({ "n" }, "<leader>e", "<cmd>Neotree reveal<CR>")
@@ -27,10 +31,8 @@ vim.keymap.set({ "n" }, "K", vim.lsp.buf.hover, {})
 vim.keymap.set({ "n" }, "<leader>gd", vim.lsp.buf.definition, {})
 vim.keymap.set({ "n" }, "<leader>gr", vim.lsp.buf.references, {})
 vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
-vim.keymap.set({ "n" }, "<leader>gf", vim.lsp.buf.format, {})
-vim.keymap.set({ "n" }, "<space>rn", vim.lsp.buf.rename, {})
+vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})
 vim.keymap.set({ "n" }, "<leader>f", vim.lsp.buf.format)
 
--- Usefull keybindings
-vim.keymap.set({ "n" }, "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set({ "n" }, "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- Fzf Mappings
+vim.keymap.set({"n", "i", "v"}, "<C-f>", "<cmd>FzfLua files<CR>")
