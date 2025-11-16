@@ -39,10 +39,12 @@ bindkey -e
 # Aliases
 #------------------------------
 alias autoremove="pacman -Qdtq | sudo pacman -Rns - || sudo paccache -ruk0"
+alias cat="bat"
 alias chmod="chmod -c"
 alias chown="chown -c"
 alias cp='cp -iv --reflink=auto'
 alias dmesg='dmesg --color=auto'
+alias fzf='fzf --preview="bat {}"'
 alias free='free --si -h'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -128,7 +130,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color prompt:#82aaff \
   --color spinner:#21c7a8
 "
-
 source <(fzf --zsh)
 
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh.json)"
