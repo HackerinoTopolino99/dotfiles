@@ -8,6 +8,9 @@ return {
 	config = function()
 		local FzfLua = require("fzf-lua")
 		FzfLua.setup({
+            lsp = {
+                async_or_timeout = 3000,
+            },
 			actions = {
 				files = {
 					false,
