@@ -43,6 +43,7 @@ alias cat="bat"
 alias chmod="chmod -c"
 alias chown="chown -c"
 alias cp='cp -iv --reflink=auto'
+alias df='df -h -H --sync -P'
 alias dmesg='dmesg --color=auto'
 alias fzf='fzf --preview="bat {}"'
 alias free='free --si -h'
