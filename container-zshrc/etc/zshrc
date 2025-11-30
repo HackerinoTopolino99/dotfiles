@@ -1,0 +1,135 @@
+# Created by newuser for 5.9
+
+#-----------------------------
+# Source some stuff
+#-----------------------------
+
+if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
+  source /usr/share/doc/pkgfile/command-not-found.zsh
+fi
+
+#------------------------------
+# History stuff
+#------------------------------
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+#------------------------------
+# Keybindings
+#------------------------------
+bindkey -e
+
+#------------------------------
+# Aliases
+#------------------------------
+alias autoremove="pacman -Qdtq | pacman -Rns - && paccache -ruk0"
+alias cat="bat"
+alias chmod="chmod -c"
+alias chown="chown -c"
+alias cp='cp -iv --reflink=auto'
+alias df='df -h -H --sync -P'
+alias dmesg='dmesg --color=auto'
+alias fzf='fzf --preview="bat {}"'
+alias free='free --si -h'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias ip='ip -color=auto'
+alias ln='ln -v'
+alias ls='ls --color=auto -h -F --group-directories-first -1'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias sudo='sudo '
+alias sync-status='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
+alias update='pacman -Syu --noconfirm && autoremove || paccache -rk1'
+
+#------------------------------
+# ShellFuncs
+#------------------------------
+# -- coloured manuals
+man() {
+  env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;40;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
+#------------------------------
+# Comp stuff
+#------------------------------
+zmodload zsh/complist 
+autoload -Uz compinit
+compinit
+zstyle :compinstall filename '${HOME}/.zshrc'
+
+#- buggy
+zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
+#-/buggy
+
+zstyle ':completion:*:pacman:*' force-list always
+zstyle ':completion:*:*:pacman:*' menu yes select
+
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*'   force-list always
+
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:killall:*'   force-list always
+
+zstyle ':completion:*' rehash true
+
+#------------------------------
+# Prompt
+#------------------------------
+autoload -U colors zsh/terminfo
+colors
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[green]}%}%s%{${fg[cyan]}%}][%{${fg[blue]}%}%r/%S%%{${fg[cyan]}%}][%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
+
+# fzf nightfly theme
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --color bg:#011627 \
+  --color bg+:#0e293f \
+  --color border:#2c3043 \
+  --color fg:#acb4c2 \
+  --color fg+:#d6deeb \
+  --color gutter:#0e293f \
+  --color header:#82aaff \
+  --color hl+:#f78c6c \
+  --color hl:#f78c6c \
+  --color info:#ecc48d \
+  --color marker:#f78c6c \
+  --color pointer:#ff5874 \
+  --color prompt:#82aaff \
+  --color spinner:#21c7a8
+"
+source <(fzf --zsh)
+
+# eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh.json)"
+
+# vim: set ts=2 sw=2 et:
