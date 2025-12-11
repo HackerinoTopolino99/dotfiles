@@ -20,7 +20,7 @@ return {
           "lemminx",
 					"lua_ls",
 					"nginx_language_server",
-					"pyright",
+					"pylsp",
 					"systemd_ls",
 					"tofu_ls",
           "tombi",

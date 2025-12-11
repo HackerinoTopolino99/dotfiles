@@ -52,25 +52,9 @@ return {
       single_file_support = true,
     }
 
-    vim.lsp.config.pyright = {
+    vim.lsp.config.pylsp = {
       filetypes = { "python" },
-      root_markers = {
-        "requirements.txt",
-        "pyproject.toml",
-        "setup.py",
-        "setup.cfg",
-        "Pipfile",
-        "pyrightconfig.json"
-      },
       single_file_support = true,
-      settings = {
-        python = {
-          analysis = {
-            diagnosticMode = "workspace",
-          },
-          venvPath = "./.venv",
-        },
-      },
     }
 
     vim.lsp.config.yamlls = {
