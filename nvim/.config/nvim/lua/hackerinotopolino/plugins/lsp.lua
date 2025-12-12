@@ -55,6 +55,7 @@ return {
     vim.lsp.config.pylsp = {
       filetypes = { "python" },
       single_file_support = true,
+      configurationSources = {"flake8", "autopep8"},
       plugins = {
           autopep8 = {
               enabled = true
