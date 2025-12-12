@@ -55,6 +55,35 @@ return {
     vim.lsp.config.pylsp = {
       filetypes = { "python" },
       single_file_support = true,
+      plugins = {
+          autopep8 = {
+              enabled = true
+          },
+          flake8 = {
+              enabled = true
+          },
+          mccabe = {
+              enabled = false
+          },
+          preload = {
+              enabled = false
+          },
+          pycodestyle = {
+              enabled = false
+          },
+          pyflakes = {
+              enabled = false
+          },
+          pydocstyle = {
+              enabled = false
+          },
+          pylint = {
+              enabled = false
+          },
+          yapf = {
+              enabled = false
+          }
+      }
     }
 
     vim.lsp.config.yamlls = {
