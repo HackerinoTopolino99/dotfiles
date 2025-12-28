@@ -1,4 +1,3 @@
-source /usr/share/nvim/archlinux.lua
 let mapleader = " "
 
 "Navigation Mappings
