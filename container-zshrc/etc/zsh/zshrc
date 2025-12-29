@@ -4,12 +4,12 @@
 # Source some stuff
 #-----------------------------
 
-if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 if [[ -f /usr/share/doc/pkgfile/command-not-found.zsh ]]; then
@@ -38,7 +38,6 @@ bindkey -e
 #------------------------------
 # Aliases
 #------------------------------
-alias autoremove="pacman -Qdtq | pacman -Rns - && paccache -ruk0"
 alias cat="bat"
 alias chmod="chmod -c"
 alias chown="chown -c"
@@ -55,8 +54,6 @@ alias ls='ls --color=auto -h -F --group-directories-first -1'
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias sudo='sudo '
-alias sync-status='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
-alias update='pacman -Syu --noconfirm && autoremove || paccache -rk1'
 
 #------------------------------
 # ShellFuncs
