@@ -55,13 +55,14 @@ return {
     vim.lsp.config.pylsp = {
       filetypes = { "python" },
       single_file_support = true,
-      configurationSources = {"flake8", "autopep8"},
+      configurationSources = {"flake8"},
       plugins = {
           autopep8 = {
               enabled = true
           },
           flake8 = {
-              enabled = true
+              enabled = true,
+              indentSize = 4
           },
           mccabe = {
               enabled = false
@@ -80,6 +81,13 @@ return {
           },
           pylint = {
               enabled = false
+          },
+          rope_autoimport = {
+              enabled = false,
+              completions = {
+                  enabled = true
+              },
+              code_actions = true
           },
           yapf = {
               enabled = false
