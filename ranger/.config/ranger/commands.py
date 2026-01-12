@@ -1,4 +1,5 @@
 import os
+
 from ranger.api.commands import Command
 from ranger.core.loader import CommandLoader
 
