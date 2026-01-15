@@ -2,7 +2,7 @@
   {
     "name": "panel-top",
     "output": "All",
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "controls": "right",
     "width": "auto",
@@ -56,11 +56,11 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "swaylock -f -c 000000"
+            "cmd": "hyprlock"
           },
           {
             "name": "Logout",
-            "cmd": "swaymsg exit"
+            "cmd": "hyprctl dispatch exit"
           },
           {
             "name": "Reboot",
@@ -71,14 +71,30 @@
             "cmd": "systemctl -i poweroff"
           }
         ]
-      }
+      },
+      "show-brightness": false,
+      "show-volume": false,
+      "show-battery": true,
+      "output-switcher": false,
+      "per-app-volume": false,
+      "backlight-controller": "brightnessctl",
+      "backlight-device": "",
+      "window-width": 0,
+      "window-margin-horizontal": 0,
+      "window-margin-vertical": 0,
+      "root-css-name": "controls-overview",
+      "battery-low-level": 20,
+      "battery-low-interval": 6,
+      "processes-label": "Processes",
+      "readme-label": "README",
+      "angle": 0.0
     },
     "tray": {
       "root-css-name": "tray",
       "inner-css-name": "inner-tray",
       "icon-size": 16,
       "smooth-scrolling-threshold": 0,
-      "new-left": true
+      "new-left": false
     },
     "sway-taskbar": {
       "workspace-menu": [
