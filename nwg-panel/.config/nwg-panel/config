@@ -25,6 +25,7 @@
     "modules-right": [
       "playerctl",
       "executor-temp",
+      "tray",
       "clock"
     ],
     "controls-settings": {
