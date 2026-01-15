@@ -24,13 +24,16 @@ button {
 /* Sample button in sample config w/ no background nor border */
 #button-custom {
     background: rgba (0, 0, 0, 0.0);
-    border: 0
+    border: 0px
 }
 
 /* Top panel in sample config uses this name */
 #panel-top {
-    background: #101010;
-    color: #eeeeee
+    background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 /* Bottom panel in sample config uses this name */
