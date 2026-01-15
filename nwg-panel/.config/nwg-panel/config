@@ -39,7 +39,7 @@
       },
       "show-values": false,
       "interval": 1,
-      "icon-size": 16,
+      "icon-size": 20,
       "hover-opens": false,
       "leave-closes": true,
       "click-closes": false,
@@ -93,7 +93,7 @@
     "tray": {
       "root-css-name": "tray",
       "inner-css-name": "inner-tray",
-      "icon-size": 16,
+      "icon-size": 20,
       "smooth-scrolling-threshold": 0,
       "new-left": false
     },
@@ -157,7 +157,7 @@
     },
     "playerctl": {
       "buttons-position": "right",
-      "icon-size": 16,
+      "icon-size": 20,
       "chars": 30,
       "scroll": false,
       "button-css-name": "",
@@ -198,7 +198,7 @@
       "show-ws-names": false,
       "mark-xwayland": true,
       "angle": 0.0,
-      "image-size": 16,
+      "image-size": 20,
       "task-padding": 0
     },
     "hyprland-workspaces": {
@@ -206,7 +206,7 @@
       "show-icon": false,
       "show-inactive-workspaces": false,
       "show-workspaces-from-all-outputs": false,
-      "image-size": 16,
+      "image-size": 20,
       "show-workspaces": true,
       "show-name": false,
       "name-length": 40,
