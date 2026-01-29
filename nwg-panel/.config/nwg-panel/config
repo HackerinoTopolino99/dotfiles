@@ -7,7 +7,7 @@
     "controls": "right",
     "width": "auto",
     "height": 40,
-    "homogeneous": true,
+    "homogeneous": false,
     "margin-top": 0,
     "margin-bottom": 0,
     "padding-horizontal": 0,
@@ -182,7 +182,31 @@
     "scratchpad": {},
     "sway-mode": {},
     "openweather": {},
-    "brightness-slider": {},
+    "brightness-slider": {
+      "show-brightness": false,
+      "show-volume": false,
+      "show-battery": true,
+      "icon-size": 20,
+      "interval": 10,
+      "hover-opens": false,
+      "leave-closes": false,
+      "root-css-name": "brightness-module",
+      "css-name": "brightness-popup",
+      "angle": 0.0,
+      "icon-placement": "start",
+      "backlight-device": "",
+      "backlight-controller": "brightnessctl",
+      "slider-orientation": "horizontal",
+      "slider-inverted": false,
+      "popup-icon-placement": "start",
+      "popup-horizontal-alignment": "left",
+      "popup-vertical-alignment": "top",
+      "popup-width": 256,
+      "popup-height": 64,
+      "popup-horizontal-margin": 0,
+      "popup-vertical-margin": 0,
+      "step-size": 1
+    },
     "dwl-tags": {},
     "hyprland-taskbar": {
       "name-max-len": 24,
@@ -222,11 +246,34 @@
     "run-if-output-absent": [],
     "width-as-percentage": false,
     "start-hidden": false,
-    "hyprland-submap": {},
+    "hyprland-submap": {
+      "show-default": false,
+      "show-icon": true,
+      "css-name": "executor-label",
+      "icon-size": 20,
+      "angle": 0.0
+    },
     "keyboard-layout": {},
     "niri-taskbar": {},
-    "random-wallpaper": {},
-    "pinned": {},
+    "random-wallpaper": {
+      "source": "wallhaven.cc",
+      "tags": [
+        "nature"
+      ],
+      "ratios": "16x9,16x10",
+      "atleast": "1920x1080",
+      "apikey": "",
+      "save-path": "/home/giuliano",
+      "local-path": "",
+      "icon-size": 20,
+      "interval": 0,
+      "refresh-on-startup": true
+    },
+    "pinned": {
+      "limit": 0,
+      "icon-size": 20,
+      "angle": 0.0
+    },
     "swaync": {
       "tooltip-text": "Notifications",
       "on-left-click": "swaync-client -t",
@@ -251,8 +298,12 @@
       "on-scroll-up": "",
       "on-scroll-down": "",
       "css-name": "",
-      "icon-size": 16,
-      "icon-placement": "left"
+      "icon-size": 20,
+      "icon-placement": "left",
+      "root-css-name": "",
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
     }
   }
 ]
