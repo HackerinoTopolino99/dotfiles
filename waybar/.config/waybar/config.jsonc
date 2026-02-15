@@ -3,8 +3,6 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
     "modules-left": [
@@ -32,18 +30,17 @@
         "disable-scroll": true,
         "all-outputs": false,
         "warp-on-scroll": false,
-        "format": "{name}"
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
+        "format": "{name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
     },
     // Center
     "hyprland/window": {
@@ -57,14 +54,13 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": "🎵"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "pulseaudio": {
-        "scroll-step": 1,
+        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -86,44 +82,50 @@
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
-//    "battery": {
-//        "states": {
-//            // "good": 95,
-//            "warning": 30,
-//            "critical": 15
-//        },
-//        "format": "{capacity}% {icon}",
-//        "format-full": "{capacity}% {icon}",
-//        "format-charging": "{capacity}% ",
-//        "format-plugged": "{capacity}% ",
-//        "format-alt": "{time} {icon}",
-//        "format-icons": ["", "", "", "", ""]
-//    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "bluetooth": {
         "format-connected": "{num_connections} {device_alias}",
-        "on-click": "blueman-manager",
+        "on-click": "blueman-manager"
     },
     "tray": {
         "icon-size": 20,
         "spacing": 10,
         "icons": {
-          "TelegramDesktop": "/usr/share/icons/Papirus-Dark/16x16/apps/telegram.svg",
-          "elecwhat": "/usr/share/icons/Papirus-Dark/16x16/apps/whatsie.svg",
-          "Element": "/usr/share/icons/Papirus-Dark/16x16/apps/element-desktop.svg",
-          "Signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
-          "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/network.svg"
+            "TelegramDesktop": "/usr/share/icons/Papirus-Dark/16x16/apps/telegram.svg",
+            "elecwhat": "/usr/share/icons/Papirus-Dark/16x16/apps/whatsie.svg",
+            "Element": "/usr/share/icons/Papirus-Dark/16x16/apps/element-desktop.svg",
+            "Signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
+            "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/network.svg"
         }
     },
     "clock": {
@@ -132,14 +134,14 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
+        "format": "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
             "logout": "hyprctl dispatch exit",
-			"reboot": "reboot",
-			"shutdown": "shutdown",
-		}
+            "reboot": "reboot",
+            "shutdown": "shutdown"
+        }
     }
 }
