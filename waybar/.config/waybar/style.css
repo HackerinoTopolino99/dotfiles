@@ -54,7 +54,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 1px;
+    padding: 0 7px;
     background-color: transparent;
     color: #ffffff;
 }
@@ -89,6 +89,7 @@ button:hover {
 #tray,
 #mode,
 #scratchpad,
+#custom-power,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -257,4 +258,13 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#custom-power {
+    border-radius: 15px;
+    background: #161320;
+    color: #B5E8E0;
+}
+#custom-power.menu.menuitem {
+    border-radius: 15px;
 }
