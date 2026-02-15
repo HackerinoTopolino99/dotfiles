@@ -15,11 +15,10 @@
     "modules-right": [
         "temperature",
         "pulseaudio",
-        "network",
-        "bluetooth",
         "backlight",
         "battery",
-        "battery#bat2",
+        "network",
+        "bluetooth",
         "tray",
         "clock",
         "custom/power"
@@ -88,7 +87,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -124,7 +123,8 @@
             "TelegramDesktop": "/usr/share/icons/Papirus-Dark/16x16/apps/telegram.svg",
             "elecwhat": "/usr/share/icons/Papirus-Dark/16x16/apps/whatsie.svg",
             "Element": "/usr/share/icons/Papirus-Dark/16x16/apps/element-desktop.svg",
-            "Signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
+            "signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
+            "discord": "/usr/share/icons/Papirus-Dark/16x16/apps/discord.svg",
             "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/network.svg"
         }
     },
