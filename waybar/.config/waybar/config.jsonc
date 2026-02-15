@@ -116,12 +116,15 @@
         "on-click": "blueman-manager",
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 20,
         "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+        "icons": {
+          "TelegramDesktop": "/usr/share/icons/Papirus-Dark/16x16/apps/telegram.svg",
+          "elecwhat": "/usr/share/icons/Papirus-Dark/16x16/apps/whatsie.svg",
+          "Element": "/usr/share/icons/Papirus-Dark/16x16/apps/element-desktop.svg",
+          "Signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
+          "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/network.svg"
+        }
     },
     "clock": {
         "timezone": "Europe/Rome",
