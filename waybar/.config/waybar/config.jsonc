@@ -59,7 +59,7 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 5,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -73,7 +73,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -83,7 +87,26 @@
         "critical-threshold": 80,
         "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "scroll-step": 5
     },
     "battery": {
         "states": {
@@ -107,10 +130,14 @@
     "network": {
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": true,
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected"
     },
     "bluetooth": {
         "format-connected": "{num_connections} {device_alias}",
@@ -125,7 +152,7 @@
             "Element": "/usr/share/icons/Papirus-Dark/16x16/apps/element-desktop.svg",
             "signal": "/usr/share/icons/Papirus-Dark/16x16/apps/signal-desktop.svg",
             "discord": "/usr/share/icons/Papirus-Dark/16x16/apps/discord.svg",
-            "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/network.svg"
+            "nm-applet": "/usr/share/icons/Papirus-Dark/16x16/places/folder-network.svg"
         }
     },
     "clock": {
