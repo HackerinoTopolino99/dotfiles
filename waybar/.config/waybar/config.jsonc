@@ -168,7 +168,7 @@
         "menu-actions": {
             "logout": "hyprctl dispatch exit",
             "reboot": "reboot",
-            "shutdown": "shutdown"
+            "shutdown": "shutdown now"
         }
     }
 }
