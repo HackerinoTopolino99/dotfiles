@@ -16,10 +16,10 @@
         "temperature",
         "pulseaudio",
         "backlight",
-        "battery",
         "network",
         "bluetooth",
         "tray",
+        "battery",
         "clock",
         "custom/power"
     ],
