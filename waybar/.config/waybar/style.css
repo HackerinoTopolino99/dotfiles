@@ -268,3 +268,15 @@ label:focus {
 #custom-power.menu.menuitem {
     border-radius: 15px;
 }
+
+#custom-notification {
+    color: @foreground;
+    font-size: 14px;
+    background: @color1;
+    margin-left: 5px;
+    border-radius: 24px 24px 24px 13px;
+}
+#custom-notification:hover {
+    background: @foreground;
+    color: @background;
+}
