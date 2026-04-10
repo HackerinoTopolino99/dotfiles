@@ -25,5 +25,6 @@ vim.opt.incsearch = false
 -- Aspect options
 vim.opt.termguicolors = true
 
--- Completion options
-vim.opt.completeopt = "noinsert,menuone,noselect"
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.o.showmode = false
