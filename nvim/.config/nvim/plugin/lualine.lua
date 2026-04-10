@@ -15,7 +15,7 @@ require("lualine").setup({
 		},
 		ignore_focus = {},
 		always_divide_middle = true,
-		always_show_tabline = false,
+		always_show_tabline = true,
 		globalstatus = true,
 		refresh = {
 			statusline = 100,
@@ -27,22 +27,29 @@ require("lualine").setup({
 		lualine_a = { "mode" },
 		lualine_b = {
 			"branch",
-			"swenv",
-			{
-				"diagnostics",
-				sources = { "nvim_lsp", "nvim_diagnostic" },
-				sections = { "error", "warn", "info", "hint" },
-
-				diagnostics_color = {},
-				symbols = { error = "E", warn = "W", info = "I", hint = "H" },
-				update_in_insert = true,
-				always_visibile = false,
-			},
+			"diagnostics",
 		},
 		lualine_c = { "filename", "filetype", "fileformat" },
 		lualine_x = { "searchcount" },
-		lualine_y = {},
-		lualine_z = { "location" },
+		lualine_y = { "location" },
+		lualine_z = {
+			{
+				"lsp_status",
+				icon = "", -- f013
+				symbols = {
+					-- Standard unicode symbols to cycle through for LSP progress:
+					spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
+					-- Standard unicode symbol for when LSP is done:
+					done = "✓",
+					-- Delimiter inserted between LSP names:
+					separator = " ",
+				},
+				-- List of LSP names to ignore (e.g., `null-ls`):
+				ignore_lsp = {},
+				-- Display the LSP name
+				show_name = true,
+			},
+		},
 	},
 	inactive_sections = {
 		lualine_a = {},
@@ -59,17 +66,11 @@ require("lualine").setup({
 		lualine_b = {
 			{
 				"tabs",
-				tab_max_length = 90,
-				max_length = vim.o.columns,
-				mode = 1,
-				path = 1,
+				tab_max_length = 40,
+				max_length = vim.o.columns / 3,
+				mode = 0,
+				path = 0,
 				use_mode_colors = false,
-
-				-- Not working
-				-- tabs_color = {
-				--  active = "lualine_{section}_normal",
-				--  inactive = "lualine_{section}_inactive",
-				--},
 
 				show_modified_status = true,
 				symbols = {
@@ -86,7 +87,20 @@ require("lualine").setup({
 				end,
 			},
 		},
-		lualine_c = {},
+		lualine_c = {
+			{
+				"windows",
+				show_filename_only = false,
+				show_modified_status = true,
+				mode = 0,
+				max_length = vim.o.columns * 2 / 3,
+
+				filetype_name = {
+					fzf = "FZF",
+				},
+				disabled_buftypes = { "quickfix", "prompt", "nofile" },
+			},
+		},
 		lualine_x = {},
 		lualine_y = {},
 		lualine_z = {},
@@ -94,7 +108,7 @@ require("lualine").setup({
 	winbar = {},
 	inactive_winbar = {},
 	extensions = {
-		"lazy",
+		"mason",
 		"neo-tree",
 		"toggleterm",
 	},
