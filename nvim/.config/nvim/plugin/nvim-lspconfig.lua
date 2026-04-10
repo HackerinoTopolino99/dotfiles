@@ -10,7 +10,6 @@ vim.lsp.config("*", {
 	capabilities = capabilities,
 })
 
-
 -- Diagnostics
 vim.diagnostic.config({
 	virtual_lines = true,

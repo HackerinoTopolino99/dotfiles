@@ -35,4 +35,4 @@ vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})
 vim.keymap.set({ "n" }, "<leader>f", vim.lsp.buf.format)
 
 -- Fzf Mappings
-vim.keymap.set({"n", "i", "v"}, "<C-f>", "<cmd>FzfLua files<CR>")
+vim.keymap.set({ "n", "i", "v" }, "<C-f>", "<cmd>FzfLua files<CR>")
