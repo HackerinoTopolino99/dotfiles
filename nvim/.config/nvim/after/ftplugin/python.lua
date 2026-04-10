@@ -1,6 +1,6 @@
-vim.opt.softtabstop = 4
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+-- vim.opt.softtabstop = 4
+-- vim.opt.tabstop = 4
+-- vim.opt.shiftwidth = 4
 
 -- Keywords
 vim.api.nvim_set_hl(0, "@keyword.python", { fg = "#FF8000" })
