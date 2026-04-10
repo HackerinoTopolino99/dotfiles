@@ -15,3 +15,5 @@ require("nvim-treesitter").install({
   "ssh_config",
 	"yaml",
 })
+
+vim.cmd("TSUpdate")
