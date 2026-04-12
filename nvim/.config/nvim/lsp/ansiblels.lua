@@ -20,7 +20,7 @@ return {
 			},
 		},
 	},
-	filetypes = { "ansible" },
+	filetypes = { "yaml.ansible" },
 	root_markers = {
 		"ansible.cfg",
 		"inventory",
