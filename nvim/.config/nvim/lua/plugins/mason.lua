@@ -17,6 +17,7 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "pylsp",
     "terraformls",
+    "yamlls"
   },
 })
 
