@@ -25,7 +25,9 @@ vim.opt.incsearch = false
 -- Aspect options
 vim.opt.termguicolors = true
 
--- Disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.o.showmode = false
+-- Diagnostics
+vim.diagnostic.config({
+	virtual_lines = true,
+	update_in_insert = false,
+	signs = true,
+})

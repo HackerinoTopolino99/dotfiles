@@ -1,6 +1,6 @@
-require("config.mapping")
-require("config.settings")
-require("config.lsp")
-require("config.autocmd")
+require("plugins")
+require("config")
+
+-- vim.cmd([[TSUpdate]])
 
 -- vim.pack.update()

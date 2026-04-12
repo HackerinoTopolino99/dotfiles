@@ -20,5 +20,3 @@ require("nvim-treesitter").install({
 	"terraform",
 	"yaml",
 })
-
-vim.cmd("TSUpdate")
