@@ -1,19 +1,12 @@
-vim.api.nvim_create_autocmd("UiEnter", {
-	callback = function(data)
-		local path = vim.fn.fnamemodify(data.file, ":h")
-		if vim.fn.isdirectory(path) == 1 then
-			vim.cmd("cd " .. path)
-			vim.cmd("Neotree show")
-		end
-	end,
+-- auto resize splits when the terminal's window is resized
+vim.api.nvim_create_autocmd("VimResized", {
+	command = "wincmd =",
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if client and client:supports_method("textDocument/completion") then
-			vim.opt.completeopt = { "menuone", "noselect", "popup", "fuzzy" }
-			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-		end
+-- no auto continue comments on new line
+vim.api.nvim_create_autocmd("FileType", {
+	group = vim.api.nvim_create_augroup("no_auto_comment", {}),
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
