@@ -3,4 +3,4 @@ require("config.settings")
 require("config.lsp")
 require("config.autocmd")
 
-vim.pack.update()
+-- vim.pack.update()

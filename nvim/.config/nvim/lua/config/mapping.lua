@@ -51,7 +51,11 @@ end, {buffer = true, silent = true})
 vim.keymap.set({ "n" }, "<leader>gr", vim.lsp.buf.references)
 vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})
-vim.keymap.set({ "n" }, "<leader>f", vim.lsp.buf.format)
+vim.keymap.set({ "n" }, "<leader>f", function()
+require("conform").format({
+})
+end
+)
 
 -- Fzf Mappings
 vim.keymap.set({ "n", "i", "v" }, "<C-f>", "<cmd>FzfLua files<CR>")
