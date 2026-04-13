@@ -59,7 +59,7 @@ alias rm='rm -iv'
 alias stow='stow -t ~ '
 alias sudo='sudo '
 alias sync-status='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
-alias update='sudo pacman -Syu --noconfirm && paru -Syua --noconfirm && autoremove || paccache -rk1'
+alias update='sudo pacman -Syu --noconfirm && paru -Syua --noconfirm && sudo paccache -rk1 && autoremove'
 
 #------------------------------
 # ShellFuncs
