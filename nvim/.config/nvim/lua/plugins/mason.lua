@@ -15,7 +15,6 @@ require("mason-lspconfig").setup({
     "jsonls",
     "ltex_plus",
     "lua_ls",
-    "nginx-config-formatter",
     "pylsp",
     "systemd_lsp",
     "terraformls",
@@ -27,6 +26,7 @@ require("mason-tool-installer").setup({
   ensure_installed = {
     "ansible-lint",
     "hclfmt",
+    "nginx-config-formatter",
     "shfmt",
     "stylua",
     "systemdlint",
