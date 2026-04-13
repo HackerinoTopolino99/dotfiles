@@ -2,6 +2,10 @@
 vim.opt.number = true
 vim.opt.mouse = "a"
 vim.opt.title = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 8
+vim.opt.updatetime = 50
+vim.opt.isfname:append("@-@")
 
 -- Split options
 vim.opt.splitright = true
@@ -20,7 +24,7 @@ vim.opt.backup = false
 
 -- Search navigation options
 vim.opt.hlsearch = true
-vim.opt.incsearch = false
+vim.opt.incsearch = true
 
 -- Aspect options
 vim.opt.termguicolors = true
