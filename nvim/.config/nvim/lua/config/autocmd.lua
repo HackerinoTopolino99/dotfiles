@@ -15,19 +15,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function(args)
 		local buffer = args.buf
-
 		if vim.bo[buffer].buftype ~= "" then
 			return
 		end
 
-    if vim.bo[buffer].buftype ~= "terminal" then
-      return
-    end
-
 		local ft = vim.bo[buffer].filetype
 		local lang = vim.treesitter.language.get_lang(ft)
-    if lang then
-		  vim.treesitter.start(args.buf, lang)
-    end
+		if lang ~= "toggleterm" then
+			vim.treesitter.start(args.buf, lang)
+		end
 	end,
 })
