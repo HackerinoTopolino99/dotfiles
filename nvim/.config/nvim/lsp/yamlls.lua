@@ -14,7 +14,7 @@ return {
 	settings = {
 		redhat = { telemetry = { enabled = false } },
 		-- formatting disabled by default in yaml-language-server; enable it
-		yaml = { format = { enable = false } },
+		yaml = { format = { enable = true } },
 	},
 	on_init = function(client)
 		client.server_capabilities.documentFormattingProvider = true

@@ -1,6 +1,6 @@
 require("plugins.autopairs")
-require("plugins.comform")
 require("plugins.completions")
+require("plugins.conform")
 require("plugins.fzf")
 require("plugins.lualine")
 require("plugins.mason")

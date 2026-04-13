@@ -15,7 +15,9 @@ require("mason-lspconfig").setup({
     "jsonls",
     "ltex_plus",
     "lua_ls",
+    "nginx-config-formatter",
     "pylsp",
+    "systemd_lsp",
     "terraformls",
     "yamlls"
   },
@@ -31,6 +33,7 @@ require("mason-tool-installer").setup({
     "tflint",
     "tfsec",
     "tex-fmt",
+    "yamllint"
   },
   auto_update = true,
   run_on_start = true,
