@@ -14,3 +14,7 @@ require("conform").setup({
     lsp_format = "fallback"
   },
 })
+
+vim.keymap.set({ "n" }, "<leader>f", function()
+	require("conform").format({})
+end)

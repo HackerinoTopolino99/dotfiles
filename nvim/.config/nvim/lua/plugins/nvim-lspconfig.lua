@@ -11,3 +11,27 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+-- LSP Mappings
+vim.keymap.set({ "n" }, "<leader>k", vim.lsp.buf.hover, {})
+vim.keymap.set({ "n" }, "<leader>gd", function()
+	vim.lsp.buf.definition({
+		on_list = function(options)
+			if #options.items > 0 then
+				local item = options.items[1]
+				local current_file = vim.api.nvim_buf_get_name(0)
+
+				if item.filename ~= current_file then
+					vim.cmd("tab split")
+				end
+
+				vim.cmd("edit " .. item.filename)
+				vim.api.nvim_win_set_cursor(0, { item.lnum, math.max(0, item.col - 1) })
+			end
+		end,
+	})
+end, { buffer = true, silent = true })
+
+vim.keymap.set({ "n" }, "<leader>gr", vim.lsp.buf.references)
+vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})

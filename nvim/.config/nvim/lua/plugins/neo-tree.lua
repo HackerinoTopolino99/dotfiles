@@ -237,3 +237,7 @@ vim.api.nvim_create_autocmd("UiEnter", {
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.o.showmode = false
+
+-- NeoTree Mappings
+vim.keymap.set({ "n", "v", "i" }, "<C-b>", "<cmd>Neotree toggle action=show<CR>")
+vim.keymap.set({ "n" }, "<leader>e", "<cmd>Neotree reveal<CR>")
