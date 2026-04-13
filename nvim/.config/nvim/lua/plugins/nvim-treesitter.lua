@@ -19,4 +19,5 @@ require("nvim-treesitter").install({
 	"ssh_config",
 	"terraform",
 	"yaml",
+    "zsh"
 })
