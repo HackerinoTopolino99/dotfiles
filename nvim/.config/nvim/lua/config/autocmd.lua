@@ -21,8 +21,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 		local ft = vim.bo[buffer].filetype
 		local lang = vim.treesitter.language.get_lang(ft)
+
 		if lang ~= "toggleterm" then
-			vim.treesitter.start(args.buf, lang)
+			pcall(vim.treesitter.start, args.buf, lang)
 		end
 	end,
 })
