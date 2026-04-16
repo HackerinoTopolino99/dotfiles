@@ -12,6 +12,7 @@ require("mason-lspconfig").setup({
     "docker_language_server",
     "gitlab_ci_ls",
     "gh_actions_ls",
+    "gopls",
     "jsonls",
     "ltex_plus",
     "lua_ls",
