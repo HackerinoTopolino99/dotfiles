@@ -4,5 +4,6 @@ vim.pack.add({
 
 require("toggleterm").setup({
 	size = 12,
-  open_mapping = [[<leader>t]]
 })
+
+vim.keymap.set({ "n" }, "<leader>t", "<cmd>ToggleTerm<CR>")
