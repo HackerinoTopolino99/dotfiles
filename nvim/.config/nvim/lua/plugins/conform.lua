@@ -4,15 +4,15 @@ vim.pack.add({
 
 require("conform").setup({
 	formatters_by_ft = {
-		hcl = { "hclfmt" },
+		hcl = { "packer_fmt" },
 		lua = { "stylua" },
-    nginx = { "nginxfmt" },
-    sh = { "shfmt" },
-    tex = { "tex-fmt"},
+		nginx = { "nginxfmt" },
+		sh = { "shfmt" },
+		tex = { "tex-fmt" },
 	},
-  default_format_opts = {
-    lsp_format = "fallback"
-  },
+	default_format_opts = {
+		lsp_format = "fallback",
+	},
 })
 
 vim.keymap.set({ "n" }, "<leader>f", function()
