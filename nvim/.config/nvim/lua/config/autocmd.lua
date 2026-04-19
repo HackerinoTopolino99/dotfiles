@@ -27,3 +27,30 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
+
+local augroup = vim.api.nvim_create_augroup('VisualComment', { clear = true })
+
+local function set_comment_char(char)
+  vim.keymap.set('v', '<leader>c', ':norm I' .. char .. ' <CR>', { buffer = true })
+end
+
+-- Linguaggi che usano #
+vim.api.nvim_create_autocmd('FileType', {
+  group = augroup,
+  pattern = { 'python', 'sh', 'yaml', 'ruby', 'yaml.ansible' },
+  callback = function() set_comment_char('#') end,
+})
+
+-- Linguaggi che usano //
+vim.api.nvim_create_autocmd('FileType', {
+  group = augroup,
+  pattern = { 'c', 'cpp', 'java', 'javascript', 'typescript' },
+  callback = function() set_comment_char('//') end,
+})
+
+-- Linguaggi che usano --
+vim.api.nvim_create_autocmd('FileType', {
+  group = augroup,
+  pattern = { 'lua', 'sql' },
+  callback = function() set_comment_char('--') end,
+})
