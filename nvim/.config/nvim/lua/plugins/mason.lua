@@ -13,6 +13,7 @@ require("mason-lspconfig").setup({
     "gitlab_ci_ls",
     "gh_actions_ls",
     "gopls",
+    "hypr",
     "jsonls",
     "ltex_plus",
     "lua_ls",
