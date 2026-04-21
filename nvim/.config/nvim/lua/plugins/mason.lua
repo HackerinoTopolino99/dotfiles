@@ -8,6 +8,7 @@ require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
     "ansiblels",
+    "asm_lsp",
     "bashls",
     "docker_language_server",
     "gitlab_ci_ls",
@@ -27,8 +28,8 @@ require("mason-lspconfig").setup({
 require("mason-tool-installer").setup({
   ensure_installed = {
     "ansible-lint",
+    "asmfmt",
     "hclfmt",
-    "nginx-config-formatter",
     "shfmt",
     "stylua",
     "systemdlint",

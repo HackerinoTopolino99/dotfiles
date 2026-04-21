@@ -4,9 +4,9 @@ vim.pack.add({
 
 require("conform").setup({
 	formatters_by_ft = {
+    asm = { "asm" },
 		hcl = { "packer_fmt" },
 		lua = { "stylua" },
-		nginx = { "nginxfmt" },
 		sh = { "shfmt" },
 		tex = { "tex-fmt" },
 	},
