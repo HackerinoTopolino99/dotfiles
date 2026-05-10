@@ -37,7 +37,7 @@ end
 -- Linguaggi che usano #
 vim.api.nvim_create_autocmd('FileType', {
   group = augroup,
-  pattern = { 'python', 'sh', 'yaml', 'ruby', 'yaml.ansible' },
+  pattern = { 'python', 'sh', 'yaml', 'ruby', 'yaml.ansible' , 'hyprlang'},
   callback = function() set_comment_char('#') end,
 })
 
