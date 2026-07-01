@@ -498,10 +498,10 @@
     },
     "network": {
         "bluetoothAutoConnect": false,
-        "bluetoothDetailsViewMode": "grid",
+        "bluetoothDetailsViewMode": "list",
         "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 60000,
-        "bluetoothRssiPollingEnabled": false,
+        "bluetoothRssiPollingEnabled": true,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
         "wifiDetailsViewMode": "grid"
