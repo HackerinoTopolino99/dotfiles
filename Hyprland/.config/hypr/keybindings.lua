@@ -11,7 +11,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind("CONTROL + ALT + T", hl.dsp.exec_cmd(programs.terminal))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ 1 && hyprlock"))
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" $HOME/Immagini/Schermate/Schermata_$(date +%Y%m%d_%H%M%S).png && notify-send "Immagine salvata in $HOME/Immagini/Schermate/Schermata_$(date+%Y%m%d_%H%M%S).png"'))
--- hl.bind(mainMod .. "Print" exec, hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | grim -g - ~/Immagini/Schermate/Schermata_$(date +%Y%m%d_%H%M%S).png && notify-send "Immagine salvata in $HOME/Immagini/Schermate/Schermata_$(date", hl.dsp.exec_cmd(+%Y%m%d_%H%M%S).png")
+hl.bind(mainMod .. "+ Print", hl.dsp.exec_cmd([[hyprctl -j activewindow | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | grim -g - ~/Immagini/Schermate/Schermata_$(date +%Y%m%d_%H%M%S).png && notify-send "Immagine salvata in $HOME/Immagini/Schermate/Schermata_$(date +%Y%m%d_%H%M%S).png"]]))
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = maximized, action = "toggle" }))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
