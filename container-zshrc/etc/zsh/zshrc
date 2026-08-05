@@ -52,6 +52,7 @@ alias ip='ip -color=auto'
 alias ln='ln -v'
 alias ls='ls --color=auto -h -F --group-directories-first -1'
 alias mv='mv -iv'
+alias ncdu='ncdu --color dark'
 alias rm='rm -iv'
 alias sudo='sudo '
 
@@ -127,6 +128,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 source <(fzf --zsh)
 
-# eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh.json)"
+eval "$(oh-my-posh init zsh --config /.dotfiles/ohmyposh/.config/ohmyposh.json)"
 
 # vim: set ts=2 sw=2 et:
