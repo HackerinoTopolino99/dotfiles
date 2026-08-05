@@ -47,10 +47,10 @@
           "style": "plain",
           "foreground": "#ffaa00",
           "background": "p:background",
-          "template": " 📦 [incus] ",
+          "template": "{{ if eq .Env.IS_CONTAINER \"true\" }} 📦 [incus]{{end}}",
           "type_property": "text",
           "rules": [
-            "eq .Env.IS_CONTAINER \"true\""
+            
           ]
         },
         {

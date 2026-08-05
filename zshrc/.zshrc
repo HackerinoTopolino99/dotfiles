@@ -133,6 +133,13 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 "
 source <(fzf --zsh)
 
+
+if [[ -e /dev/lxd ]] || [[ -f /dev/incus ]] || grep -q 'container=lxd' /proc/1/environ 2>/dev/null; then
+  export IS_CONTAINER=true
+else
+  export IS_CONTAINER=false
+fi
+
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh.json)"
 
 export PYENV_ROOT="$HOME/.pyenv"
