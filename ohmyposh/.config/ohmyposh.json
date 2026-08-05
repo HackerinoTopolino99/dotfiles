@@ -45,13 +45,20 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#ffaa00",
+          "foreground": "p:yellow",
           "background": "p:background",
-          "template": "{{ if eq .Env.IS_CONTAINER \"true\" }} 📦 [incus]{{end}}",
+          "template": "{{ if eq .Env.IS_CONTAINER \"true\" }} 📦 [incus]{{end}} ",
           "type_property": "text",
           "rules": [
             
           ]
+        },
+        {
+          "template": " {{ if .SSHSession }}\ueba9 {{ end }}",
+          "foreground": "p:yellow",
+          "background": "p:background",
+          "type": "session",
+          "style": "powerline"
         },
         {
           "options": {
@@ -64,7 +71,7 @@
           "style": "powerline"
         },
         {
-          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }}",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
           "foreground": "p:bright_green",
           "background": "p:background",
           "type": "session",
