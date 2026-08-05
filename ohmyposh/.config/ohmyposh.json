@@ -43,6 +43,17 @@
           "style": "plain"
         },
         {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#ffaa00",
+          "background": "p:background",
+          "template": " 📦 [incus] ",
+          "type_property": "text",
+          "rules": [
+            "eq .Env.IS_CONTAINER \"true\""
+          ]
+        },
+        {
           "options": {
             "macos": "mac"
           },
