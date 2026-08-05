@@ -129,7 +129,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 source <(fzf --zsh)
 
 
-if [[ -e /dev/lxd ]] || [[ -f /dev/incus ]] || grep -q 'container=lxd' /proc/1/environ 2>/dev/null; then
+if [[ -e /dev/lxd ]] || [[ -e /dev/incus ]]; then
   export IS_CONTAINER=true
 else
   export IS_CONTAINER=false
