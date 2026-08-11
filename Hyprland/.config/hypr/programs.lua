@@ -6,5 +6,5 @@
 return {
 	terminal = "foot",
 	fileManager = "thunar",
-	menu = "qs -c noctalia-shell ipc call launcher toggle",
+	menu = "dms ipc call spotlight toggle",
 }
