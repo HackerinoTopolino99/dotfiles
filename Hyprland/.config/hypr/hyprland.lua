@@ -9,7 +9,25 @@
 -- Create your files separately and then link them to this file like this:
 -- require("myColors")
 
+----------------------------------
+------ AUTOSTART ------
+----------------------------------
+
+-- Autostart necessary processes (like notifications daemons, status bars, etc.)
+-- Or execute your favorite apps at launch like this:
+
+hl.on("hyprland.start", function ()
+  -- Noctalia
+  hl.exec_cmd("dms run")
+
+  -- Message services
+  hl.exec_cmd("Telegram -startintray & elecwhat")
+
+  -- Mail Services
+  hl.exec_cmd("mailspring -b && prospect-mail")
+end)
 require("autostart")
+
 require("environment")
 require("input")
 require("look")
