@@ -67,7 +67,7 @@ hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("dms ipc call dankdash wallpaper"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("dms ipc call hypr toggleOverview"))
 
 -- Security
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl play-pause && dms ipc call lock lock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("playerctl pause; dms ipc call lock lock"))
 
 -- Audio Controls
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("dms ipc call audio increment 5"), { locked = true, repeating = true })
