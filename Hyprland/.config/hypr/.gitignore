@@ -2,3 +2,4 @@ autostart.lua
 environment.lua
 monitors.lua
 workspaces.lua
+dms/
