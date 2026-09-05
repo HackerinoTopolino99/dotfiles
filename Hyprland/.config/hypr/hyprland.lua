@@ -17,14 +17,18 @@
 -- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function ()
-  -- Noctalia
-  hl.exec_cmd("dms run")
+  -- Nwg-panel
+  hl.exec_cmd("nm-applet")
+  hl.exec_cmd("blueman-applet")
+  hl.exec_cmd("nwg-panel")
 
   -- Message services
-  hl.exec_cmd("Telegram -startintray & elecwhat")
+  hl.exec_cmd("Telegram -startintray")
+  hl.exec_cmd("elecwhat")
 
   -- Mail Services
-  hl.exec_cmd("mailspring -b && prospect-mail")
+  hl.exec_cmd("mailspring -b")
+  hl.exec_cmd("prospect-mail")
 end)
 require("autostart")
 
@@ -35,6 +39,5 @@ require("permissions")
 require("programs")
 require("keybindings")
 require("workspaces")
-require("dms.misc")
-require("dms.layout")
-require("dms.outputs")
+require("misc")
+require("monitors")

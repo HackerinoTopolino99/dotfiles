@@ -1,0 +1,159 @@
+/***** SUGGESTED TO CHANGE CAREFULLY *****/
+
+/* Recommended if panel "height" unset or smaller then your theme default button height */
+button {
+    margin: 2px
+}
+
+/* SwayTaskBar and SwayWorkspaces use custom widgets, that need this and the next name
+   to highlight currently focused task / workspace. */
+#task-box {
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+#task-box-focused {
+    background-color: rgba (255, 255, 255, 0.12);
+    padding-left: 4px;
+    padding-right: 4px
+}
+
+
+/***** MODIFY TO YOUR TASTE *****/
+
+@define-color bg_color #011627;
+@define-color fg_color #bdc1c6;
+@define-color accent_color #b2ceee;
+
+/* Sample button in sample config w/ no background nor border */
+#button-custom {
+    background: rgba (0, 0, 0, 0.0);
+    border: 0
+}
+
+/* Top panel in sample config uses this name */
+#panel-top {
+    background: @bg_color;
+    color: @fg_color;
+}
+
+/* Bottom panel in sample config uses this name */
+#panel-bottom {
+    background: @bg_color;
+    color: @fg_color
+}
+
+/* Hyprland Workspaces in sample config uses this name */
+#hyprland-workspaces {
+    background: @bg_color;
+    border-radius: 6px;
+    padding: 0 4px;
+}
+#hyprland-workspaces button {
+    color: @fg_color;
+    padding: 0 8px;
+    margin: 2px;
+}
+#hyprland-workspaces button:checked {
+    background: #b2ceee;
+    color: #080808;
+}
+#hyprland-workspaces button:hover {
+    background: #eeeeee;
+}
+
+/* Contenitore principale della lista finestre */
+#hyprland-taskbar {
+    padding: 0 4px;
+}
+
+/* Finestre normali (in background) */
+#hyprland-taskbar button {
+    color: @fg_color;
+    background: transparent;
+    padding: 0 8px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+/* Finestra attiva/selezionata */
+#hyprland-taskbar button:checked {
+    background-color: @accent_color;
+    color: #080808;
+}
+
+/* Effetto al passaggio del mouse */
+#hyprland-taskbar button:hover {
+    background: #eeeeee;
+}
+
+/* Controls window in sample config uses this name */
+#controls-window {
+    border-radius: 15px;
+    background: @bg_color;
+    color: @fg_color
+}
+#controls-window scale value {
+    color: @fg_color
+}
+
+/* Brightness slider popup window in sample config uses this name */
+#brightness-popup {
+    border-radius: 15px;
+    background: @bg_color;
+    color: @fg_color
+}
+#brightness-popup box {
+    padding: 15px;
+}
+
+/* Executors usually behave better in monospace fonts */
+#executor-label {
+    font-family: monospace
+}
+
+/* and so does the Clock */
+#clock {
+    font-family: monospace;
+    font-size: 16px
+}
+
+/* Sample executor-weather uses "css-name": "weather" */
+#weather {
+    font-size: 16px
+}
+
+/* dwl-tags module */
+#dwl-tag-box {
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+#dwl-tag-occupied {
+	font-family: monospace;
+	color: #eee;
+    background-color: #006699;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-free {
+	font-family: monospace;
+	color: #eee;
+    background-color: rgba (32, 50, 90, 1.0);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-urgent {
+	font-family: monospace;
+	color: #eee;
+    background-color: #ee6600;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#dwl-tag-selected {
+	border: solid 2px;
+	border-color: #81a1c1
+}

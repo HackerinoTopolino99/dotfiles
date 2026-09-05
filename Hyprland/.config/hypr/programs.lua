@@ -6,5 +6,6 @@
 return {
 	terminal = "foot",
 	fileManager = "thunar",
-	menu = "dms ipc call spotlight toggle",
+	menu = "hyprlauncher",
+  lock_manager = "hyprlock"
 }
