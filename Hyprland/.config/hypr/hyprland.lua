@@ -24,7 +24,7 @@ hl.on("hyprland.start", function ()
 
   -- Message services
   hl.exec_cmd("Telegram -startintray")
-  hl.exec_cmd("elecwhat")
+  hl.exec_cmd("whatsdesk")
 
   -- Mail Services
   hl.exec_cmd("mailspring -b")
