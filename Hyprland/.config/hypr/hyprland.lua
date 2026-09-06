@@ -17,7 +17,9 @@
 -- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function ()
-  -- Nwg-panel
+  -- System
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("hyprpoolkitagent")
   hl.exec_cmd("nm-applet")
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("nwg-panel")
