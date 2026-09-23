@@ -148,4 +148,8 @@ if [[ -e "$HOME/.pyenv" ]]; then
   eval "$(pyenv init - zsh)"
 fi
 
+if [[ -e "$HOME/.local/bin" ]]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # vim: set ts=2 sw=2 et:
