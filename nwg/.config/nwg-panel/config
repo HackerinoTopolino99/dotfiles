@@ -27,12 +27,13 @@
       "executor-cpuav",
       "executor-memory",
       "executor-temp",
-      "clock",
-      "tray"
+      "tray",
+      "clock"
     ],
     "controls-settings": {
       "components": [
-        "volume"
+        "volume",
+        "battery"
       ],
       "commands": {
         "battery": ""
