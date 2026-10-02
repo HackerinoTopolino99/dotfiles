@@ -18,7 +18,7 @@ require("mason-lspconfig").setup({
     "jsonls",
     "ltex_plus",
     "lua_ls",
-    "pylsp",
+    "ruff",
     "systemd_lsp",
     "terraformls",
     "yamlls"
