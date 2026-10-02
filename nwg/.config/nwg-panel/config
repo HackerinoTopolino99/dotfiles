@@ -143,7 +143,7 @@
       "angle": 0.0
     },
     "clock": {
-      "format": "%a, %d. %b  %H:%M:%S",
+      "format": "%H:%M:%S",
       "tooltip-text": "",
       "on-left-click": "",
       "on-middle-click": "",
@@ -151,7 +151,18 @@
       "on-scroll-up": "",
       "on-scroll-down": "",
       "css-name": "clock",
-      "interval": 1
+      "interval": 1,
+      "tooltip-date-format": true,
+      "root-css-name": "root-clock",
+      "angle": 0.0,
+      "calendar-path": "",
+      "calendar-css-name": "calendar-window",
+      "calendar-placement": "top",
+      "calendar-margin-horizontal": 0,
+      "calendar-margin-vertical": 0,
+      "calendar-icon-size": 24,
+      "calendar-interval": 60,
+      "calendar-on": true
     },
     "playerctl": {
       "buttons-position": "left",
