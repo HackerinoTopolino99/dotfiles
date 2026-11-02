@@ -59,7 +59,7 @@ return {
 				"typst",
 				"xhtml",
 			},
-			language = "en-US",
+			language = "it-IT",
 		},
 	},
 }
