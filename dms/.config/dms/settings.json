@@ -672,6 +672,6 @@
   "focusRingEnabled": false,
   "buttonColorMode": "primary",
   "focusFollowsMouse": 1,
-  "soundLogin": true,
+  "soundLogin": false,
   "greeterPamExternallyManaged": true
 }
