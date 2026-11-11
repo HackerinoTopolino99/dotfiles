@@ -671,5 +671,7 @@
   "radiusMode": "fixed",
   "focusRingEnabled": false,
   "buttonColorMode": "primary",
-  "focusFollowsMouse": 1
+  "focusFollowsMouse": 1,
+  "soundLogin": true,
+  "greeterPamExternallyManaged": true
 }
