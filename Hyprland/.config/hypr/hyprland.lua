@@ -1,4 +1,5 @@
 -- Hyprland configuration (Lua) — https://wiki.hypr.land/configuring/
+require("environment")
 
 -- DMS_STARTUP_BEGIN
 hl.on("hyprland.start", function()
@@ -90,5 +91,4 @@ require("dms.binds")
 require("dms.binds-user")
 require("dms.windowrules")
 require("workspaces")
-require("environment")
 require("look")
