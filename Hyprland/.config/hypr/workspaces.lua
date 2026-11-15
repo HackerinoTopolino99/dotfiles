@@ -36,7 +36,7 @@ hl.window_rule({ match = { class = "^(foot)$" }, opacity = "0.9 0.9" })
 hl.workspace_rule({ workspace = "1", monitor = "HDMI-A-2", layout = "scrolling" })
 hl.workspace_rule({ workspace = "2", monitor = "HDMI-A-3", layout = "scrolling" })
 hl.workspace_rule({ workspace = "3", monitor = "HDMI-A-3", default_name = "Browser" })
-hl.workspace_rule({ workspace = "4", monitor = "HDMI-A-3", default_name = "Messages" })
+hl.workspace_rule({ workspace = "4", monitor = "HDMI-A-3", default_name = "Messages", layout="scrolling" })
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-3", default_name = "Music" })
 hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-2", layout = "master", default_name = "Games" })
 
