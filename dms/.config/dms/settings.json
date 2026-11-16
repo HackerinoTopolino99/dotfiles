@@ -644,7 +644,7 @@
   "osdKeyboardLayoutEnabled": false,
   "keyboardLayouts": "it",
   "syncModeWithPortal": true,
-  "terminalsAlwaysDark": false,
+  "terminalsAlwaysDark": true,
   "notificationFocusedMonitor": true,
   "screenPreferences": {
     "notifications": [
@@ -695,5 +695,6 @@
   "matugenTemplateNeovim": false,
   "matugenTemplateQtengine": false,
   "matugenTemplateQt6ct": true,
-  "matugenTemplateQt5ct": true
+  "matugenTemplateQt5ct": true,
+  "terminalPalette": "default"
 }
